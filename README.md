@@ -10,3 +10,8 @@ rails c
 alarm = Alarm.new
 alarm.save
 ```
+
+
+To Do:
+[ ] Add routes & secure them
+[ ] UI
