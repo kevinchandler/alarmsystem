@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'pry-rails', group: :development
+gem 'pry-nav', group: :development
+
 gem 'dotenv'
 
 gem 'twilio-ruby'
@@ -43,4 +46,3 @@ gem 'rspec-rails', '~> 3.0.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

@@ -23,6 +23,20 @@ class AlarmsController < ApplicationController
     alarm.save
   end
 
+  def motion_detected
+    alarm = Alarm.find(params[:id])
+    if params[:alarm_passcode].to_s == ENV['alarm_passcode'].to_s
+      if alarm.should_alert?
+        alarm.alert
+        return render :status => 200, :json => {}
+      else
+        render :status => 204, :json => {}
+      end
+    else
+      render :status => 422, :json => {reason: 'Incorrect Passcode'}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_alarm
@@ -31,6 +45,6 @@ class AlarmsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alarm_params
-      params.require(:alarm).permit(:state, :reference)
+      params.require(:alarm).permit(:state, :alarm_passcode)
     end
 end

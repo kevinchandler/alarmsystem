@@ -2,15 +2,14 @@ class Alarm < ActiveRecord::Base
   has_many :logs
 
   def should_alert?
-    last_alerted = self.logs.last.created_at
-    if last_alerted
-      if last_alerted < 2.minutes.ago
-        return true
-      else
-        return false
-      end
+    if self.state == 'home'
+      return false
+    elsif self.logs.empty?
+      return true
+    elsif self.logs.present? && self.logs.last.created_at < 2.minutes.ago
+      return true
     else
-      return true # no logs created
+      return false
     end
   end
 
