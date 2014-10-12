@@ -12,6 +12,6 @@ alarm.save
 ```
 
 
-- [ ] Add routes & secure them
+- [x] Add routes & secure them
 - [ ] UI Pincode
 - [ ] Change background color on motion detected
