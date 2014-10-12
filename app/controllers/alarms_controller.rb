@@ -19,7 +19,7 @@ class AlarmsController < ApplicationController
   
   def status
     alarm = Alarm.find(params[:id])
-    alarm.state = params[:status]
+    alarm.state = params[:state]
     alarm.save
   end
 
