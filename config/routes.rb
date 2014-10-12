@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   resources :alarms
 
+  match "/alarms/:id/:status" => "alarms#status", via: [:get, :post]
+    # match '/verification/id_image/:jumio_reference' => 'verification#id_image', :as => :verification_id_image
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

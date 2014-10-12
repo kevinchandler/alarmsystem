@@ -1,1 +1,1 @@
-json.extract! @alarm, :id, :state, :reference, :created_at, :updated_at
+json.extract! @alarm, :id, :state, :created_at, :updated_at
