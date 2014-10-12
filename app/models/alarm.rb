@@ -22,7 +22,7 @@ class Alarm < ActiveRecord::Base
   end
 
   def alert
-    // do stuff to alert 
+   # do stuff to alert 
   end
 
 
