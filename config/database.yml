@@ -15,6 +15,6 @@ development:
 test:
   host: localhost
   adapter: postgresql
-  database: cloudalarm_test
+  database: cloudalarm
   username: alarmuser
   password: alarmpassword

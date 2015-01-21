@@ -16,9 +16,9 @@ RSpec.describe Alarm do
       expect(alarm.state).to eq('away')
     end
 
-    it 'alerts the user' do
-      alarm.alert
+    # it 'alerts the user' do
+    #   alarm.alert
 
-    end
+    # end
       
 end
